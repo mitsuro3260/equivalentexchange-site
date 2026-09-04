@@ -1,0 +1,2229 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equivalent Exchange | 店舗ビジネスの持続的な成長を最大化する共創パートナー</title>
+  
+  <!-- OGP & Meta tags for SEO & Social Sharing -->
+  <meta name="description" content="店舗の光熱費・通信費・決済手数料・求人費など主要11項目の固定費を一括削減。助成金やDX導入まで店舗のキャッシュフローと持続的成長を最大化する共創パートナーです。">
+  <meta property="og:title" content="Equivalent Exchange | 店舗の固定費削減・DX支援パートナー">
+  <meta property="og:description" content="最短1分で店舗の固定費削減額を無料試算。知恵と手段を先行提供し、店舗利益を最大化します。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@600;700;800&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#051E3D',
+              navyDeep: '#052A6E',
+              blue: '#0863C5',
+              cyan: '#00A8CC',
+              cyanBright: '#00D2FF',
+              teal: '#009688',
+              accent: '#00C2CB',
+              orange: '#FF6B00',
+              orangeHover: '#EA580C',
+              orangeLight: '#FFF7ED',
+              darkText: '#0A192F',
+              bodyText: '#334155',
+              subText: '#64748B',
+              bgLight: '#F8FAFC',
+              cardBg: '#FFFFFF',
+              borderLight: '#E2E8F0'
+            }
+          },
+          fontFamily: {
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+            en: ['"Inter"', '"Plus Jakarta Sans"', 'sans-serif'],
+            brandTitle: ['"Inter"', '"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background-color: #F8FAFC;
+      color: #0A192F;
+      overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .font-en {
+      font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-brand-title {
+      font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #00D2FF 0%, #00A8CC 50%, #0863C5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    }
+    .card-shadow {
+      box-shadow: 0 10px 30px -5px rgba(0, 168, 204, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+    }
+    .card-shadow:hover {
+      box-shadow: 0 20px 40px -8px rgba(0, 168, 204, 0.14), 0 6px 12px -3px rgba(0, 0, 0, 0.05);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #F1F5F9;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #00A8CC;
+      border-radius: 4px;
+    }
+    /* Dynamic tab views */
+    .tab-content {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* =========================================================
+       HERO MULTI-LAYER LOGO-GRADIENT LOADING RING & PORTAL
+       ========================================================= */
+    .hero-portal-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      height: 480px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 640px) {
+      .hero-portal-wrapper {
+        max-width: 320px;
+        height: 320px;
+      }
+    }
+
+    .portal-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 48% 52% 60% 40% / 45% 55% 45% 55%;
+      border: 3.5px solid transparent;
+      pointer-events: none;
+      transition: all 0.5s ease;
+    }
+
+    /* Layer 1 - Aqua Cyan Glow */
+    .portal-ring-1 {
+      border-color: rgba(0, 210, 255, 0.85);
+      box-shadow: 0 0 35px rgba(0, 210, 255, 0.3), inset 0 0 25px rgba(0, 168, 204, 0.18);
+      animation: rotateRing1 12s linear infinite;
+    }
+    /* Layer 2 - Turquoise Wave */
+    .portal-ring-2 {
+      inset: 14px;
+      border-radius: 56% 44% 40% 60% / 50% 42% 58% 50%;
+      border-color: rgba(0, 168, 204, 0.85);
+      box-shadow: 0 0 30px rgba(0, 168, 204, 0.25);
+      animation: rotateRing2 18s linear infinite reverse;
+    }
+    @media (max-width: 640px) {
+      .portal-ring-2 { inset: 10px; }
+    }
+    /* Layer 3 - Ocean Blue Pulse */
+    .portal-ring-3 {
+      inset: 28px;
+      border-radius: 42% 58% 65% 35% / 55% 45% 55% 45%;
+      border-color: rgba(8, 99, 197, 0.8);
+      box-shadow: 0 0 35px rgba(8, 99, 197, 0.3);
+      animation: rotateRing3 9s linear infinite;
+    }
+    @media (max-width: 640px) {
+      .portal-ring-3 { inset: 20px; }
+    }
+    /* Layer 4 - Outer Solid Ring */
+    .portal-ring-4 {
+      inset: 42px;
+      border-radius: 50% 50% 45% 55% / 40% 60% 40% 60%;
+      border: 2.5px solid rgba(0, 210, 255, 0.65);
+      box-shadow: 0 0 25px rgba(0, 210, 255, 0.2);
+      animation: rotateRing1 25s linear infinite reverse;
+    }
+    @media (max-width: 640px) {
+      .portal-ring-4 { inset: 30px; }
+    }
+
+    @keyframes rotateRing1 {
+      0% { transform: rotate(0deg) scale(1); }
+      50% { transform: rotate(180deg) scale(1.02); }
+      100% { transform: rotate(360deg) scale(1); }
+    }
+    @keyframes rotateRing2 {
+      0% { transform: rotate(0deg) scale(1.02); }
+      50% { transform: rotate(180deg) scale(0.98); }
+      100% { transform: rotate(360deg) scale(1.02); }
+    }
+    @keyframes rotateRing3 {
+      0% { transform: rotate(0deg) scale(0.99); }
+      50% { transform: rotate(180deg) scale(1.03); }
+      100% { transform: rotate(360deg) scale(0.99); }
+    }
+
+    /* Interactive Center Button & Core */
+    .portal-core {
+      position: relative;
+      z-index: 20;
+      width: 78%;
+      height: 78%;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #00D2FF 0%, #00A8CC 35%, #0863C5 75%, #052A6E 100%);
+      box-shadow: 0 15px 45px -8px rgba(0, 168, 204, 0.45), inset 0 0 30px rgba(255, 255, 255, 0.25);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      border: 3px solid rgba(255, 255, 255, 0.65);
+    }
+    @media (max-width: 640px) {
+      .portal-core {
+        padding: 0.75rem;
+        width: 74%;
+        height: 74%;
+      }
+    }
+    
+    .portal-core .portal-title {
+      color: #FFFFFF;
+      text-shadow: 0 2px 10px rgba(5, 42, 110, 0.35);
+      transition: all 0.35s ease;
+    }
+    .portal-core .portal-badge {
+      color: #E0F7FF;
+      transition: color 0.35s ease;
+    }
+    .portal-core .portal-notice {
+      color: #D1E8FF;
+      transition: color 0.35s ease;
+    }
+
+    /* Hover Transformation */
+    .portal-core:hover {
+      transform: scale(1.05);
+      background: radial-gradient(circle at center, #FFFFFF 0%, #F0F9FF 75%, #E0F2FE 100%);
+      box-shadow: 0 20px 55px -5px rgba(0, 168, 204, 0.5), inset 0 0 35px rgba(0, 210, 255, 0.2);
+      border-color: #00A8CC;
+    }
+    .portal-core:hover .portal-title {
+      color: #052A6E;
+      text-shadow: none;
+    }
+    .portal-core:hover .portal-badge {
+      color: #0088AA;
+    }
+    .portal-core:hover .portal-notice {
+      color: #475569;
+    }
+
+    /* Hero Light Background Stage */
+    .hero-stage-white {
+      background: radial-gradient(circle at center, #FFFFFF 0%, #F4FAFC 60%, #EBF4F8 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* =========================================================
+       CUSTOM CONTROLS: CHECKBOX & DYNAMIC FILL RANGE SLIDER
+       ========================================================= */
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 1.25rem;
+      height: 1.25rem;
+      border: 2px solid #CBD5E1;
+      border-radius: 0.375rem;
+      background-color: #FFFFFF;
+      display: inline-grid;
+      place-content: center;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    input[type="checkbox"]:checked {
+      background-color: #00A8CC;
+      border-color: #00A8CC;
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+      background-size: 85% 85%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    input[type="checkbox"].accent-orange:checked {
+      background-color: #FF6B00;
+      border-color: #FF6B00;
+    }
+    input[type="checkbox"]:focus {
+      outline: 2px solid rgba(0, 168, 204, 0.4);
+      outline-offset: 2px;
+    }
+
+    /* Dynamic Fill Range Slider */
+    input[type="range"].cost-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 9px;
+      border-radius: 9999px;
+      border: 1px solid #CBD5E1;
+      outline: none;
+      cursor: pointer;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    input[type="range"].cost-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00D2FF 0%, #00A8CC 100%);
+      border: 2.5px solid #FFFFFF;
+      box-shadow: 0 2px 7px rgba(0, 168, 204, 0.5);
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    input[type="range"].cost-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      box-shadow: 0 3px 12px rgba(0, 168, 204, 0.7);
+    }
+    input[type="range"].cost-slider::-moz-range-thumb {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00D2FF 0%, #00A8CC 100%);
+      border: 2.5px solid #FFFFFF;
+      box-shadow: 0 2px 7px rgba(0, 168, 204, 0.5);
+      cursor: pointer;
+    }
+    input[type="range"].cost-slider::-moz-range-track {
+      height: 9px;
+      border-radius: 9999px;
+      border: 1px solid #CBD5E1;
+    }
+
+    /* Horizontal Snap Carousel for Service Gallery */
+    .snap-carousel {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .snap-carousel > div {
+      scroll-snap-align: start;
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-accent selection:text-white min-h-screen flex flex-col bg-brand-bgLight">
+
+  <!-- BACKGROUND ANIMATION CANVAS (Global Logo-Color Rings for All Pages) -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <canvas id="hero-canvas" class="w-full h-full opacity-65"></canvas>
+    <div class="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-brand-bgLight/40 pointer-events-none"></div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Container -->
+      <a href="javascript:void(0)" onclick="switchPage('home')" class="flex items-center group">
+        <img src="logo.png" alt="Equivalent Exchange" class="h-9 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.style.display='none'; document.getElementById('header-fallback-text').style.display='flex';">
+        <!-- Fallback text for preview environment -->
+        <div id="header-fallback-text" class="hidden items-center gap-2">
+          <span class="font-en text-xl sm:text-3xl font-black tracking-tight text-brand-darkText">Equivalent Exchange</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation (Icons Unified with Mobile) -->
+      <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold">
+        <button onclick="switchPage('home')" class="nav-link text-brand-cyan hover:text-brand-blue transition-colors active-nav py-2 flex items-center gap-1.5" data-target="home">
+          <i class="fa-solid fa-house text-xs"></i>
+          <span>トップ</span>
+        </button>
+        <button onclick="switchPage('about')" class="nav-link text-brand-bodyText hover:text-brand-cyan transition-colors py-2 flex items-center gap-1.5" data-target="about">
+          <i class="fa-solid fa-lightbulb text-xs"></i>
+          <span>私たちが考える「等価交換」</span>
+        </button>
+        <button onclick="switchPage('service')" class="nav-link text-brand-bodyText hover:text-brand-cyan transition-colors py-2 flex items-center gap-1.5" data-target="service">
+          <i class="fa-solid fa-briefcase text-xs"></i>
+          <span>事業内容</span>
+        </button>
+        <button onclick="switchPage('simulator')" class="nav-link text-brand-bodyText hover:text-brand-cyan font-bold transition-colors flex items-center gap-1.5 py-2" data-target="simulator">
+          <i class="fa-solid fa-calculator text-xs"></i>
+          <span>コスト削減シミュレーター</span>
+          <span class="px-2 py-0.5 text-[10px] bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 rounded-full font-black">無料</span>
+        </button>
+        <button onclick="switchPage('company')" class="nav-link text-brand-bodyText hover:text-brand-cyan transition-colors py-2 flex items-center gap-1.5" data-target="company">
+          <i class="fa-solid fa-building text-xs"></i>
+          <span>会社概要</span>
+        </button>
+        
+        <!-- Prominent Orange CTA Button -->
+        <button onclick="switchPage('contact')" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-brand-orange text-white font-bold hover:from-amber-600 hover:to-brand-orangeHover shadow-lg shadow-orange-500/30 hover:scale-105 transition-all flex items-center gap-2">
+          <i class="fa-solid fa-envelope text-xs"></i>
+          <span>無料相談・お問い合わせ</span>
+        </button>
+      </nav>
+
+      <!-- Mobile Hamburger -->
+      <button id="mobile-toggle-btn" class="lg:hidden text-2xl text-brand-darkText hover:text-brand-cyan focus:outline-none p-2" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Drawer (Icons & Active Color Fully Synced) -->
+    <div id="mobile-drawer" class="hidden lg:hidden bg-white/98 border-b border-slate-200 px-6 py-6 space-y-3 shadow-xl">
+      <button onclick="switchPage('home')" class="mobile-nav-link w-full text-left py-2.5 px-3 rounded-xl font-semibold flex items-center gap-2.5 text-brand-cyan bg-brand-cyan/10" data-target="home">
+        <i class="fa-solid fa-house text-sm w-5 text-center"></i>
+        <span>トップ</span>
+      </button>
+      <button onclick="switchPage('about')" class="mobile-nav-link w-full text-left py-2.5 px-3 rounded-xl font-medium flex items-center gap-2.5 text-brand-bodyText hover:text-brand-cyan hover:bg-slate-50" data-target="about">
+        <i class="fa-solid fa-lightbulb text-sm w-5 text-center"></i>
+        <span>私たちが考える「等価交換」</span>
+      </button>
+      <button onclick="switchPage('service')" class="mobile-nav-link w-full text-left py-2.5 px-3 rounded-xl font-medium flex items-center gap-2.5 text-brand-bodyText hover:text-brand-cyan hover:bg-slate-50" data-target="service">
+        <i class="fa-solid fa-briefcase text-sm w-5 text-center"></i>
+        <span>事業内容</span>
+      </button>
+      <button onclick="switchPage('simulator')" class="mobile-nav-link w-full text-left py-2.5 px-3 rounded-xl font-medium flex items-center gap-2.5 text-brand-bodyText hover:text-brand-cyan hover:bg-slate-50" data-target="simulator">
+        <i class="fa-solid fa-calculator text-sm w-5 text-center"></i>
+        <span>コスト削減シミュレーター</span>
+        <span class="ml-auto px-2 py-0.5 text-[10px] bg-brand-cyan/15 text-brand-cyan border border-brand-cyan/30 rounded-full font-black">無料</span>
+      </button>
+      <button onclick="switchPage('company')" class="mobile-nav-link w-full text-left py-2.5 px-3 rounded-xl font-medium flex items-center gap-2.5 text-brand-bodyText hover:text-brand-cyan hover:bg-slate-50" data-target="company">
+        <i class="fa-solid fa-building text-sm w-5 text-center"></i>
+        <span>会社概要</span>
+      </button>
+      <button onclick="switchPage('contact')" class="w-full text-center py-3 rounded-xl bg-gradient-to-r from-amber-500 to-brand-orange text-white font-bold mt-4 shadow-lg shadow-orange-500/25 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-envelope text-xs"></i>
+        <span>無料相談・お問い合わせ</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER WITH SUBPAGE VIEWS -->
+  <main class="relative z-10 pt-20 flex-grow">
+
+    <!-- ================= PAGE 1: HOME (TOP) ================= -->
+    <div id="page-home" class="tab-content active">
+      
+      <!-- HERO SECTION -->
+      <section class="hero-stage-white py-12 sm:py-24 px-4 sm:px-6 lg:px-8 relative min-h-[85vh] sm:min-h-[88vh] flex items-center justify-center border-b border-slate-200">
+        <div class="absolute inset-0 pointer-events-none">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] sm:w-[600px] h-[500px] sm:h-[600px] bg-brand-cyan/8 rounded-full blur-3xl"></div>
+          <div class="absolute top-1/4 right-1/4 w-60 sm:w-72 h-60 sm:h-72 bg-brand-blue/6 rounded-full blur-2xl"></div>
+        </div>
+
+        <div class="max-w-5xl mx-auto w-full flex flex-col items-center text-center relative z-10 space-y-6 sm:space-y-7">
+          
+          <!-- Top Tagline Badge -->
+          <div class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white border border-brand-cyan/30 text-brand-cyan text-[11px] sm:text-xs font-bold tracking-wide shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-brand-cyanBright animate-ping"></span>
+            <span>現場伴走型・店舗利益改革ソリューション</span>
+          </div>
+
+          <!-- Main English Hero Title -->
+          <h1 class="font-brand-title text-3xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-brand-darkText leading-tight sm:leading-tight">
+            Better than yesterday
+          </h1>
+
+          <!-- Subtitle Japanese -->
+          <p class="text-base sm:text-xl text-brand-bodyText max-w-2xl mx-auto font-semibold leading-relaxed">
+            昨日より一歩前へ。<br>
+            あらゆる手段で店舗の成長を後押しする。
+          </p>
+
+          <!-- PORTAL (4 SOLID RINGS & LOGO GRADIENT CORE) -->
+          <div class="py-2 w-full flex justify-center">
+            <div class="hero-portal-wrapper group">
+              <div class="portal-ring portal-ring-1"></div>
+              <div class="portal-ring portal-ring-2"></div>
+              <div class="portal-ring portal-ring-3"></div>
+              <div class="portal-ring portal-ring-4"></div>
+
+              <div onclick="switchPage('simulator')" class="portal-core">
+                <span class="portal-badge text-[10px] sm:text-[11px] font-bold tracking-widest uppercase mb-1 flex items-center gap-1.5">
+                  <i class="fa-solid fa-lightbulb text-amber-300 animate-pulse text-xs sm:text-sm"></i>
+                  <span>1分で即時算出</span>
+                </span>
+
+                <span class="portal-title text-lg sm:text-2xl lg:text-3xl font-black leading-tight">
+                  コスト削減<br>シミュレーター
+                </span>
+
+                <span class="mt-2.5 sm:mt-3.5 px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-amber-500 to-brand-orange text-white text-[11px] sm:text-sm font-extrabold shadow-lg shadow-orange-500/35 group-hover:scale-105 transition-all flex items-center gap-1.5 sm:gap-2">
+                  <i class="fa-solid fa-calculator text-xs"></i>
+                  <span>今すぐ無料で試す</span>
+                  <i class="fa-solid fa-arrow-right text-[9px] sm:text-[10px]"></i>
+                </span>
+
+                <span class="portal-notice text-[9px] sm:text-[10px] mt-1.5 sm:mt-2.5 font-medium">
+                  ✓ 契約の義務は一切なし
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sub Description & About Link -->
+          <div class="max-w-2xl mx-auto space-y-4 pt-1 px-2">
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+              光熱費・通信費・決済手数料などの固定費削減から、<br class="hidden sm:inline">
+              助成金・補助金を活用した現場のDX化まで。<br class="sm:hidden">
+              店舗のコストを一括で削減依頼ができ、キャッシュフローを最適化します。
+            </p>
+
+            <div class="pt-1 flex justify-center">
+              <button id="about-card-anchor" onclick="switchPage('about')" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-darkText hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                <span>私たちが考える「等価交換」とは</span>
+                <i class="fa-solid fa-arrow-right text-xs text-brand-cyanBright"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Metrics Badges -->
+      <section class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto text-left">
+          <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 border-l-4 border-l-brand-cyan card-shadow">
+            <div class="text-[11px] sm:text-xs text-brand-subText font-bold uppercase tracking-wider">削減対象領域</div>
+            <div class="text-2xl sm:text-3xl font-black text-brand-darkText font-en mt-1"><span class="counter" data-target="11">0</span> <span class="text-sm font-sans font-bold text-brand-cyan">項目</span></div>
+            <div class="text-xs text-brand-subText mt-1">インフラからWeb・採用まで網羅</div>
+          </div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 border-l-4 border-l-brand-blue card-shadow">
+            <div class="text-[11px] sm:text-xs text-brand-subText font-bold uppercase tracking-wider">平均削減余地</div>
+            <div class="text-2xl sm:text-3xl font-black text-brand-cyan font-en mt-1"><span class="counter" data-target="15">0</span>〜<span class="counter" data-target="35">0</span> <span class="text-sm font-sans font-bold">%</span></div>
+            <div class="text-xs text-brand-subText mt-1">固定費の無駄を徹底適正化</div>
+          </div>
+          <div class="p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 border-l-4 border-l-brand-cyanBright card-shadow">
+            <div class="text-[11px] sm:text-xs text-brand-subText font-bold uppercase tracking-wider">アプローチ</div>
+            <div class="text-lg sm:text-xl font-black text-brand-darkText mt-1">3大ソリューション</div>
+            <div class="text-xs text-brand-subText mt-1">守り・攻め・基盤の三位一体改革</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 業種別 コスト削減実績 -->
+      <section class="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="text-center mb-10 sm:mb-14">
+          <span class="text-brand-cyan font-en font-bold tracking-widest text-xs uppercase">Case Studies</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-brand-darkText mt-1">業種別 コスト削減実績</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-2">実際の店舗様における月次削減インパクトの一例です</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Case 1: 飲食店 -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 card-shadow flex flex-col justify-between relative overflow-hidden">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-amber-500/10 text-amber-600 rounded-full text-xs font-bold flex items-center gap-1.5">
+                  <i class="fa-solid fa-utensils"></i> 居酒屋・ダイニング（40席）
+                </span>
+                <span class="text-[11px] text-slate-400 font-medium">東京都</span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">月間固定費削減インパクト</div>
+                <div class="text-2xl sm:text-3xl font-black text-brand-cyan font-en mt-0.5">
+                  -¥58,000 <span class="text-xs font-sans font-bold text-slate-600">/ 月</span>
+                </div>
+                <div class="text-xs font-bold text-slate-700 mt-1">年間創出キャッシュ：約70万円</div>
+              </div>
+              <div class="p-3 bg-brand-bgLight rounded-xl border border-slate-100 text-xs text-slate-600 space-y-1.5">
+                <div class="flex items-center justify-between font-medium">
+                  <span>新電力・都市ガス切替</span><strong class="text-brand-darkText font-en">-¥22,000</strong>
+                </div>
+                <div class="flex items-center justify-between font-medium">
+                  <span>キャッシュレス手数料見直し</span><strong class="text-brand-darkText font-en">-¥26,000</strong>
+                </div>
+                <div class="flex items-center justify-between font-medium">
+                  <span>POSレジ・光回線プラン適正化</span><strong class="text-brand-darkText font-en">-¥10,000</strong>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 mt-4 text-[11px] text-slate-500">
+              ※業務オペレーションの変更なく固定費のみを確実に圧縮
+            </div>
+          </div>
+
+          <!-- Case 2: 美容サロン -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border-2 border-brand-cyan/40 card-shadow flex flex-col justify-between relative overflow-hidden">
+            <div class="absolute top-0 right-0 px-4 py-1 bg-gradient-to-r from-brand-cyan to-brand-blue text-white text-[10px] font-black rounded-bl-xl uppercase">Pick Up</div>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-teal-50 text-teal-700 rounded-full text-xs font-bold flex items-center gap-1.5">
+                  <i class="fa-solid fa-scissors"></i> 美容室・ヘアサロン（6席）
+                </span>
+                <span class="text-[11px] text-slate-400 font-medium">愛知県</span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">月間固定費削減インパクト</div>
+                <div class="text-2xl sm:text-3xl font-black text-brand-cyan font-en mt-0.5">
+                  -¥38,000 <span class="text-xs font-sans font-bold text-slate-600">/ 月</span>
+                </div>
+                <div class="text-xs font-bold text-slate-700 mt-1">年間創出キャッシュ：約45万円</div>
+              </div>
+              <div class="p-3 bg-brand-bgLight rounded-xl border border-slate-100 text-xs text-slate-600 space-y-1.5">
+                <div class="flex items-center justify-between font-medium">
+                  <span>求人掲載費の適正化・SNS活用</span><strong class="text-brand-darkText font-en">-¥22,000</strong>
+                </div>
+                <div class="flex items-center justify-between font-medium">
+                  <span>店舗通信・Wi-Fi環境見直し</span><strong class="text-brand-darkText font-en">-¥6,000</strong>
+                </div>
+                <div class="flex items-center justify-between font-medium">
+                  <span>予約管理システムプラン見直し</span><strong class="text-brand-darkText font-en">-¥10,000</strong>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 mt-4 text-[11px] text-slate-500">
+              ※MEO集客を強化しつつ広告掲載コストを適正化
+            </div>
+          </div>
+
+          <!-- Case 3: クリニック・整体院 -->
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 card-shadow flex flex-col justify-between relative overflow-hidden">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <span class="px-3 py-1 bg-sky-500/10 text-sky-600 rounded-full text-xs font-bold flex items-center gap-1.5">
+                  <i class="fa-solid fa-shop"></i> 整体院・クリニック（1拠点）
+                </span>
+                <span class="text-[11px] text-slate-400 font-medium">大阪府</span>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-medium">月間固定費削減インパクト</div>
+                <div class="text-2xl sm:text-3xl font-black text-brand-cyan font-en mt-0.5">
+                  -¥46,000 <span class="text-xs font-sans font-bold text-slate-600">/ 月</span>
+                </div>
+                <div class="text-xs font-bold text-slate-700 mt-1">年間創出キャッシュ：約55万円</div>
+              </div>
+              <div class="p-3 bg-brand-bgLight rounded-xl border border-slate-100 text-xs text-slate-600 space-y-1.5">
+                <div class="flex items-center justify-between font-medium">
+                  <span>空調省エネ化・電力切替</span><strong class="text-brand-darkText font-en">-¥16,000</strong>
+                </div>
+                <div class="flex items-center justify-between font-medium">
+                  <span>高額Web管理契約の自社化</span><strong class="text-brand-darkText font-en">-¥18,000</strong>
+                </div>
+                <div class="flex items-center justify-between font-medium">
+                  <span>決済代行手数料率の個別交渉</span><strong class="text-brand-darkText font-en">-¥12,000</strong>
+                </div>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 mt-4 text-[11px] text-slate-500">
+              ※浮いた資金で最新機器を導入し単価アップを実現
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 3 Core Solutions Overview Section -->
+      <section class="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-4">
+          <div>
+            <span class="text-brand-cyan font-en font-bold tracking-widest text-xs uppercase">Core Solutions</span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-brand-darkText mt-1">店舗経営の可能性を最大化する3本柱</h2>
+          </div>
+          <button onclick="switchPage('service')" class="text-sm text-brand-cyan font-bold hover:underline flex items-center gap-1.5 self-start md:self-auto">
+            すべての詳細を見る <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Pillar 1 -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-2xl bg-brand-cyan/10 text-brand-cyan flex items-center justify-center text-xl sm:text-2xl">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-600">固定費・資金</span>
+              </div>
+              <div class="text-xs font-bold font-en text-brand-cyan uppercase tracking-wider mb-1">Defense & Finance</div>
+              <h3 class="text-lg sm:text-xl font-bold text-brand-darkText mb-3">1. 守りの強化<br><span class="text-sm font-normal text-brand-subText">財務体質・キャッシュフロー改善</span></h3>
+              <p class="text-brand-bodyText text-xs sm:text-sm leading-relaxed mb-6">
+                電気・ガス・通信から決済手数料・厨房リースまで、店舗の利益を圧迫する固定費を徹底見直し。<br class="hidden sm:inline">
+                手元に残る運転資金を即座に厚くします。
+              </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 flex items-center justify-between text-xs text-brand-cyan font-bold">
+              <span>コスト削減 / 資金調達</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-cyan/30 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-all duration-300 relative">
+            <div class="absolute -top-3 right-6 px-3 py-1 bg-gradient-to-r from-brand-cyan to-brand-blue text-white text-[11px] font-black rounded-full uppercase shadow-sm">Growth</div>
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-2xl bg-brand-blue/10 text-brand-blue flex items-center justify-center text-xl sm:text-2xl">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-cyan-50 text-cyan-800">集客・人材</span>
+              </div>
+              <div class="text-xs font-bold font-en text-brand-blue uppercase tracking-wider mb-1">Attack & Team</div>
+              <h3 class="text-lg sm:text-xl font-bold text-brand-darkText mb-3">2. 攻めの拡大<br><span class="text-sm font-normal text-brand-subText">売上向上・集客・採用支援</span></h3>
+              <p class="text-brand-bodyText text-xs sm:text-sm leading-relaxed mb-6">
+                店舗の魅力を再言語化し、Googleマップ（MEO）やSNS、Webを活用した安定来店ルートを構築。<br class="hidden sm:inline">
+                さらに現場を支える人材獲得の仕組みを整えます。
+              </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 flex items-center justify-between text-xs text-brand-blue font-bold">
+              <span>集客支援 / 採用支援</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 card-shadow flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <div class="w-12 sm:w-14 h-12 sm:h-14 rounded-2xl bg-sky-500/10 text-sky-600 flex items-center justify-center text-xl sm:text-2xl">
+                  <i class="fa-solid fa-gears"></i>
+                </div>
+                <span class="text-[11px] font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-600">DX・効率化</span>
+              </div>
+              <div class="text-xs font-bold font-en text-sky-600 uppercase tracking-wider mb-1">DX & Operation</div>
+              <h3 class="text-lg sm:text-xl font-bold text-brand-darkText mb-3">3. 基盤の最適化<br><span class="text-sm font-normal text-brand-subText">店舗運営の業務効率化・DX</span></h3>
+              <p class="text-brand-bodyText text-xs sm:text-sm leading-relaxed mb-6">
+                POSレジや予約・シフト管理など、現場のムダや属人化を排除。<br class="hidden sm:inline">
+                オーナー様が最も価値を発揮できる接客と店舗づくりに専念できる環境を実現します。
+              </p>
+            </div>
+            <div class="border-t border-slate-100 pt-4 flex items-center justify-between text-xs text-sky-600 font-bold">
+              <span>DXツール選定 / 業務標準化</span>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ご相談から削減完了までの4ステップ -->
+      <section class="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-200">
+        <div class="text-center mb-10 sm:mb-14">
+          <span class="text-brand-cyan font-en font-bold tracking-widest text-xs uppercase">Process & Flow</span>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-brand-darkText mt-1">ご相談から削減完了までの4ステップ</h2>
+          <p class="text-xs sm:text-sm text-slate-500 mt-2">店舗様側の面倒な手続きや現場の切り替え負担は一切ありません</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 relative">
+          
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow flex flex-col justify-between relative">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-brand-cyan text-white font-en font-black text-lg flex items-center justify-center mb-4 shadow-md shadow-brand-cyan/20">
+                01
+              </div>
+              <h3 class="text-base font-bold text-brand-darkText mb-2">無料試算・ご相談</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                シミュレーターで気になる項目を選択、またはフォーム・LINEよりお気軽にお問い合わせください。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-brand-cyan font-bold flex items-center gap-1">
+              <i class="fa-solid fa-clock"></i> 所要時間：約1分
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow flex flex-col justify-between relative">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-brand-cyan text-white font-en font-black text-lg flex items-center justify-center mb-4 shadow-md shadow-brand-cyan/20">
+                02
+              </div>
+              <h3 class="text-base font-bold text-brand-darkText mb-2">明細・検針票の確認</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                直近の電気・ガス検針票や通信・決済明細の写真を送るだけで、専任スタッフが精緻な診断を行います。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-brand-cyan font-bold flex items-center gap-1">
+              <i class="fa-solid fa-camera"></i> 写真送付のみでOK
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border border-slate-200 card-shadow flex flex-col justify-between relative">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-brand-cyan text-white font-en font-black text-lg flex items-center justify-center mb-4 shadow-md shadow-brand-cyan/20">
+                03
+              </div>
+              <h3 class="text-base font-bold text-brand-darkText mb-2">最適削減プランのご提案</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                提携事業者の中から最も削減効果の高い組み合わせを比較提示。契約の義務はございません。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-emerald-600 font-bold flex items-center gap-1">
+              <i class="fa-solid fa-shield-check"></i> 押し売り一切なし
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 border-2 border-brand-cyan card-shadow flex flex-col justify-between relative">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-brand-orange text-white font-en font-black text-lg flex items-center justify-center mb-4 shadow-md shadow-orange-500/20">
+                04
+              </div>
+              <h3 class="text-base font-bold text-brand-darkText mb-2">切替完了・削減スタート</h3>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                ご納得いただいたプランの切替手続きを当社が代行。設備工事や業務停止のリスクなく翌月から削減が反映されます。
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-brand-orange font-bold flex items-center gap-1">
+              <i class="fa-solid fa-sparkles"></i> 翌月からキャッシュ改善
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Before / After Comparison Section -->
+      <section class="py-14 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto border-t border-slate-200">
+        <div class="text-center mb-10 sm:mb-12">
+          <span class="text-brand-cyan font-en font-bold tracking-widest text-xs uppercase">Comparison</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-darkText mt-1">他社営業代理店と私たちの違い</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
+          <div class="bg-slate-100/80 rounded-3xl p-6 sm:p-7 border border-slate-200 space-y-4">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-slate-300 text-slate-600 flex items-center justify-center font-bold text-sm">×</span>
+              <h3 class="text-base font-bold text-slate-600">他社営業代理店</h3>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-slate-600">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> 特定の商材一つを個別提案</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> 契約したら終わりで現場の運用サポートがない</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-xmark text-rose-500 mt-1"></i> 料金構造が不透明で本当に安くなったか不明</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-3xl p-6 sm:p-7 border-2 border-brand-cyan card-shadow space-y-4 relative overflow-hidden">
+            <div class="absolute top-0 right-0 px-4 py-1 bg-gradient-to-r from-brand-cyan to-brand-blue text-white text-[10px] font-black rounded-bl-xl uppercase">Our Standard</div>
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-brand-cyan/20 text-brand-cyan flex items-center justify-center font-bold text-sm"><i class="fa-solid fa-check"></i></span>
+              <h3 class="text-base font-bold text-brand-darkText">弊社</h3>
+            </div>
+            <ul class="space-y-3 text-xs sm:text-sm text-brand-bodyText">
+              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-cyan mt-1"></i> 11項目の全方位比較で店舗に最適な方法をまとめて提示</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-cyan mt-1"></i> 先ずは知恵と手段を先行提供をして現場に伴走</li>
+              <li class="flex items-start gap-2"><i class="fa-solid fa-check text-brand-cyan mt-1"></i> 手元に残るキャッシュの最大化と持続的成長をゴールに設定</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transparency Note: Why is it Free? -->
+      <section class="py-10 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="p-6 sm:p-8 rounded-3xl bg-brand-bgLight border border-brand-cyan/30 text-center space-y-3">
+          <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider"><i class="fa-solid fa-circle-question"></i> よくあるご質問</span>
+          <h3 class="text-base sm:text-xl font-bold text-brand-darkText">なぜ店舗オーナー様は無料で診断・相談できるのか？</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            当社は提携インフラ事業者・ソリューション提供元からの取次・アライアンス手数料によって運営されています。<br class="hidden sm:inline">
+            そのため、店舗オーナー様から着手金や相談料をいただくことは一切ありません。後から高額な請求が発生することもございませんのでご安心ください。
+          </p>
+        </div>
+      </section>
+
+      <!-- BOTTOM SIMULATOR BANNER -->
+      <section class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="rounded-3xl p-6 sm:p-12 bg-gradient-to-br from-white via-slate-50 to-teal-50/40 border-2 border-brand-cyan/20 card-shadow relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
+          <div class="space-y-3 sm:space-y-4 max-w-2xl text-center lg:text-left">
+            <span class="px-3.5 py-1 rounded-full bg-brand-cyan/10 border border-brand-cyan/20 text-brand-cyan text-xs font-extrabold uppercase">1分で試算完了</span>
+            <h3 class="text-xl sm:text-3xl font-extrabold text-brand-darkText">あなたの店舗、月々いくら削減できる？</h3>
+            <p class="text-brand-bodyText text-xs sm:text-base leading-relaxed">
+              電気代、ガス代、通信費、決済手数料、求人費など、店舗で発生する主要11項目のコスト削減シミュレーションを完全無料で即座に算出します。
+            </p>
+          </div>
+          <button onclick="switchPage('simulator')" class="w-full sm:w-auto whitespace-nowrap px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-brand-orange text-white font-extrabold text-sm sm:text-base shadow-lg shadow-orange-500/25 hover:from-amber-600 hover:to-brand-orangeHover hover:scale-105 transition-all flex items-center justify-center gap-2">
+            <span>シミュレーターを開く</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ================= PAGE 2: ABOUT (理念・私たちについて) ================= -->
+    <div id="page-about" class="tab-content">
+      <section class="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto relative">
+        <div class="text-center mb-10 sm:mb-16">
+          <span class="text-brand-cyan font-en font-bold tracking-widest text-xs uppercase">Philosophy</span>
+          <h1 class="text-2xl sm:text-5xl font-black text-brand-darkText mt-2">私たちが考える「等価交換」</h1>
+          <p class="text-brand-subText mt-3 sm:mt-4 max-w-2xl mx-auto text-xs sm:text-base">
+            「Equivalent Exchange」に込めた信念と基準
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 sm:p-12 space-y-5 sm:space-y-6 text-brand-bodyText text-sm sm:text-lg leading-relaxed card-shadow border border-slate-200 mb-12 sm:mb-16 relative z-10">
+          <p class="text-brand-darkText font-bold text-base sm:text-xl leading-snug">
+            営業という営みの本質は、決して目先の身銭や手数料を追うことではありません。
+          </p>
+          <p class="text-xs sm:text-base leading-relaxed text-slate-700">
+            ビジネスの世界において「等価交換」という言葉は、しばしば「支払った金額に見合う最小限の労働や商材を提供する」という、冷淡な取引関係として扱われがちです。また、多くの営業組織が自社の利益や短期的なノルマを最優先にし、顧客の真の課題から目を背けた押し売りを繰り返している現状があります。
+          </p>
+          <p class="text-xs sm:text-base leading-relaxed text-slate-700">
+            しかし、人と人、企業と企業が本物の信頼関係を築くプロセスにおいて、自分が「やってあげた」と思う労力と、相手が「してもらった」と感じる価値は決して一致しません。均衡をとろうとして対価と同等のものしか差し出さない組織は、相手の期待を超えることができず、やがて淘汰されます。
+          </p>
+          
+          <div class="p-5 sm:p-8 rounded-2xl bg-brand-bgLight border-l-4 border-brand-cyan my-4 sm:my-6">
+            <p class="text-brand-darkText font-bold text-sm sm:text-lg leading-relaxed">
+              だからこそ私たちは、まずお客様が真に求めている価値を察知し、持てるすべての手段に知恵を加え、出し惜しみのない行動を先行させる。
+            </p>
+          </div>
+
+          <p class="text-xs sm:text-base leading-relaxed text-slate-700 font-semibold">
+            これこそが、私たちが現場で証明し続ける真の「等価交換」です。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16 relative z-10">
+          <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 border-l-4 border-l-brand-cyan card-shadow">
+            <span class="text-brand-cyan font-en font-bold text-xs uppercase tracking-wider">Mission / 使命</span>
+            <h3 class="text-lg sm:text-xl font-bold text-brand-darkText mt-2 mb-3">「対価以上の価値提供」から、すべての信頼を築く。</h3>
+            <p class="text-xs sm:text-sm text-brand-bodyText leading-relaxed">
+              対価を求める前に、持てるすべての知恵と実行力で顧客の利益を最大化し、揺るぎない信頼を築き上げます。
+            </p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 border-l-4 border-l-brand-blue card-shadow">
+            <span class="text-brand-blue font-en font-bold text-xs uppercase tracking-wider">Vision / 目指す姿</span>
+            <h3 class="text-lg sm:text-xl font-bold text-brand-darkText mt-2 mb-3">人が育ち、知恵が集まり、関わるすべての価値を最大化する共創集団。</h3>
+            <p class="text-xs sm:text-sm text-brand-bodyText leading-relaxed">
+              自ら学び進化し続ける個が集まり、顧客と共にビジネスの基準を引き上げるプロフェッショナル集団であり続けます。
+            </p>
+          </div>
+        </div>
+
+        <div class="relative z-10">
+          <div class="text-center mb-8 sm:mb-10">
+            <span class="text-brand-cyan font-en font-bold text-xs uppercase tracking-widest">Our Value</span>
+            <h3 class="text-xl sm:text-2xl font-bold text-brand-darkText mt-1">私たちが現場で貫く3つの基準</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            <div class="bg-white rounded-2xl p-6 sm:p-7 relative overflow-hidden border border-slate-200 card-shadow">
+              <span class="font-en text-4xl sm:text-5xl font-black text-brand-cyan/10 absolute top-3 right-5">01</span>
+              <h4 class="text-brand-cyan font-bold text-base mb-2 sm:mb-3">1. 先ずは与えよ</h4>
+              <p class="text-xs sm:text-sm text-brand-bodyText leading-relaxed">
+                自分の「やってあげた」と相手の「してもらった」は均衡がとれない。だからこそ、持てるすべての手段に知恵を加え出し惜しみのない価値提供を先行する。
+              </p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 sm:p-7 relative overflow-hidden border border-slate-200 card-shadow">
+              <span class="font-en text-4xl sm:text-5xl font-black text-brand-blue/10 absolute top-3 right-5">02</span>
+              <h4 class="text-brand-blue font-bold text-base mb-2 sm:mb-3">2. 主体的な限界突破</h4>
+              <p class="text-xs sm:text-sm text-brand-bodyText leading-relaxed">
+                受け身を嫌い、できない理由を探す前に、今できる最適解を自らの行動で証明する。
+              </p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 sm:p-7 relative overflow-hidden border border-slate-200 card-shadow">
+              <span class="font-en text-4xl sm:text-5xl font-black text-sky-600/10 absolute top-3 right-5">03</span>
+              <h4 class="text-sky-600 font-bold text-base mb-2 sm:mb-3">3. 自己進化への執着</h4>
+              <p class="text-xs sm:text-sm text-brand-bodyText leading-relaxed">
+                目の前の“人”の明確な力となるために、学び、成長し、自身の市場価値を上げ続ける。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 3: SERVICE (事業内容 - 修正反映版) ================= -->
+    <div id="page-service" class="tab-content">
+      <section class="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-10 sm:mb-16">
+          <span class="text-brand-cyan font-en font-bold tracking-widest text-xs uppercase">Service & Solutions</span>
+          <h1 class="text-2xl sm:text-5xl font-black text-brand-darkText mt-2">事業内容</h1>
+          <p class="text-brand-subText mt-3 sm:mt-4 max-w-2xl mx-auto text-xs sm:text-base">
+            店舗ビジネスの「守り」「攻め」「基盤」を全方位で最適化し、持続的な成長を最大化する。
+          </p>
+        </div>
+
+        <div class="space-y-12 sm:space-y-16">
+          
+          <!-- Category 1: 守りの強化 (固定費削減・資金) -->
+          <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 border-l-4 border-l-brand-cyan card-shadow space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-cyan/10 text-brand-cyan text-xs font-bold">
+                  <i class="fa-solid fa-shield-halved"></i> 財務体質・キャッシュ改善
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-brand-darkText mt-1">1. 守りの強化｜固定費削減・資金調達支援</h2>
+              </div>
+              <span class="text-xs text-slate-400">※PCは左右の矢印で切替、スマホは横スワイプで閲覧できます</span>
+            </div>
+
+            <!-- Carousel Frame with Side Arrows on PC -->
+            <div class="relative group">
+              <!-- Left Arrow Button (PC) -->
+              <button onclick="scrollServiceCarousel('carousel-defense', -320)" class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 border border-slate-200 shadow-xl text-brand-darkText hover:text-brand-cyan hover:scale-110 transition-all items-center justify-center focus:outline-none">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <!-- Carousel Track -->
+              <div id="carousel-defense" class="snap-carousel overflow-x-auto flex gap-4 sm:gap-5 pb-3 custom-scrollbar">
+                
+                <!-- Card 1: 電気・都市ガス -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=600&q=80" alt="電気・ガス料金見直し" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-amber-500 text-white text-[10px] font-bold">光熱費適正化</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">電気・都市ガス料金見直し</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">店舗の動力・電灯使用状況に合わせて新電力・新ガスプランを一括比較。平均10〜25%削減。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: 水道料金（節水） -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="水道料金削減" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-blue-500 text-white text-[10px] font-bold">節水ソリューション</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">水道料金・節水装置導入</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">厨房や手洗い場の水圧・使用感を損なわずに流量を制御。初期費用実質ゼロで経費削減。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3: 固定電話・光回線 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="固定電話・光回線" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-emerald-500 text-white text-[10px] font-bold">店舗通信インフラ</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">固定電話・店舗光回線最適化</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">不要なオプション契約の精査や法人卸プランの導入により、回線品質を保ったまま月額圧縮。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4: 事業主専用 携帯プラン (個人契約から事業主専用特別プランへの切り替え) -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=600&q=80" alt="事業主専用携帯プラン" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-brand-cyan text-white text-[10px] font-bold">特別プラン</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">個人契約から事業主専用特別プランへ切替</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">個人名義のまま支払っているスマホ通信費を、事業主・法人専用の特別優遇プランへ移行し大幅圧縮。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5: クレジット決済手数料 (確実に表示される高画質スマート決済端末画像) -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556742049-0a67e5577227?auto=format&fit=crop&w=600&q=80" alt="クレジットカード決済端末・決済代行手数料見直し" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&q=80';">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-brand-blue text-white text-[10px] font-bold">手数料個別交渉</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">クレカ・決済代行手数料の適正化</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">店舗規模や売上実績に応じた決済代行会社への個別引き下げ交渉。毎月の粗利率をダイレクトに改善。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6: 厨房機器・空調設備リース料 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=600&q=80" alt="厨房機器・空調設備リース料" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-slate-700 text-white text-[10px] font-bold">設備コスト見直し</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">空調設備メンテナンス・厨房リース料</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">高額リース契約の見直しや補助金を活用した省エネ機器へのリプレイスで月額固定費を圧縮。</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Arrow Button (PC) -->
+              <button onclick="scrollServiceCarousel('carousel-defense', 320)" class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 border border-slate-200 shadow-xl text-brand-darkText hover:text-brand-cyan hover:scale-110 transition-all items-center justify-center focus:outline-none">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 2: 攻めの拡大 (集客・HP・デリバリー・採用) -->
+          <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 border-l-4 border-l-brand-blue card-shadow space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-brand-blue/10 text-brand-blue text-xs font-bold">
+                  <i class="fa-solid fa-chart-line"></i> 売上拡大・集客・採用
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-brand-darkText mt-1">2. 攻めの拡大｜集客支援・HP制作・デリバリー新規導入</h2>
+              </div>
+              <span class="text-xs text-slate-400">※PCは左右の矢印で切替、スマホは横スワイプで閲覧できます</span>
+            </div>
+
+            <!-- Carousel Frame with Side Arrows on PC -->
+            <div class="relative group">
+              <!-- Left Arrow Button (PC) -->
+              <button onclick="scrollServiceCarousel('carousel-growth', -320)" class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 border border-slate-200 shadow-xl text-brand-darkText hover:text-brand-blue hover:scale-110 transition-all items-center justify-center focus:outline-none">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <!-- Carousel Track -->
+              <div id="carousel-growth" class="snap-carousel overflow-x-auto flex gap-4 sm:gap-5 pb-3 custom-scrollbar">
+                
+                <!-- Card 1: ホームページ制作・ブランド構築 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="ホームページ制作" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-brand-blue text-white text-[10px] font-bold">Web制作・自社運用</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">ホームページ制作・ブランド構築</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">高額な月額管理費縛りのない、店舗自ら簡単に更新できる洗練されたWebサイト・予約導線を構築。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: 新規デリバリー導入・運用支援 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=600&q=80" alt="デリバリー新規導入" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-amber-500 text-white text-[10px] font-bold">新規導入支援</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">新規デリバリー導入・運用サポート</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">出前館・Uber Eats等の新規加盟申請、専用メニュー原価設計、複数端末の一括運用体制を構築。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3: MEO・Googleマップ集客 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1576267423445-b2e0074d68a4?auto=format&fit=crop&w=600&q=80" alt="MEO集客" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-teal-600 text-white text-[10px] font-bold">ローカル集客</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">MEO・Googleマップ集客対策</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">「地域名×業種」での上位露出、クチコミ獲得フローの整備により広告費に頼らない来店ルートを構築。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4: 求人・採用単価圧縮 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80" alt="採用支援" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-purple-600 text-white text-[10px] font-bold">採用最適化</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">採用単価圧縮・求人定着化支援</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">Indeed無料枠やSNS採用への移行により高額な媒体掲載費を削減。定着率向上の仕組みまで伴走。</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Arrow Button (PC) -->
+              <button onclick="scrollServiceCarousel('carousel-growth', 320)" class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 border border-slate-200 shadow-xl text-brand-darkText hover:text-brand-blue hover:scale-110 transition-all items-center justify-center focus:outline-none">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category 3: 基盤の最適化 (店舗DX・業務効率化) -->
+          <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 border-l-4 border-l-sky-500 card-shadow space-y-6">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-100 pb-4">
+              <div>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-sky-500/10 text-sky-600 text-xs font-bold">
+                  <i class="fa-solid fa-gears"></i> 現場生産性向上・DX
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-brand-darkText mt-1">3. 基盤の最適化｜店舗DX・業務標準化</h2>
+              </div>
+              <span class="text-xs text-slate-400">※PCは左右の矢印で切替、スマホは横スワイプで閲覧できます</span>
+            </div>
+
+            <!-- Carousel Frame with Side Arrows on PC -->
+            <div class="relative group">
+              <!-- Left Arrow Button (PC) -->
+              <button onclick="scrollServiceCarousel('carousel-dx', -320)" class="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 border border-slate-200 shadow-xl text-brand-darkText hover:text-sky-600 hover:scale-110 transition-all items-center justify-center focus:outline-none">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <!-- Carousel Track -->
+              <div id="carousel-dx" class="snap-carousel overflow-x-auto flex gap-4 sm:gap-5 pb-3 custom-scrollbar">
+                
+                <!-- Card 1: クラウドPOSレジ選定 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=600&q=80" alt="クラウドPOSレジ" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-sky-600 text-white text-[10px] font-bold">POSシステム</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">クラウドPOSレジ・オーダー選定</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">操作性に優れ、月額コストが安価なPOSレジやモバイルオーダーを比較選定・導入支援。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2: シフト・勤怠自動化 -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=600&q=80" alt="シフト・勤怠自動化" class="w-full h-full object-cover">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-cyan-700 text-white text-[10px] font-bold">勤怠・シフト</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">シフト管理・予約一元化</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">ダブルブッキングやシフト調整の工数を削減し、オーナー様が本業に専念できる環境を整備。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3: 助成金・IT導入補助金 (明るい店舗DX・タブレット相談シーンへ刷新) -->
+                <div class="w-[280px] sm:w-[310px] shrink-0 bg-brand-bgLight rounded-2xl border border-slate-200 overflow-hidden card-shadow flex flex-col">
+                  <div class="h-36 bg-slate-200 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="IT導入補助金・助成金申請支援" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80';">
+                    <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[10px] font-bold">公的制度活用</span>
+                  </div>
+                  <div class="p-4 space-y-1.5 flex-grow flex flex-col justify-between">
+                    <div>
+                      <h3 class="font-bold text-sm text-brand-darkText">IT導入補助金・助成金申請支援</h3>
+                      <p class="text-xs text-slate-600 leading-relaxed mt-1">国や自治体の補助金制度をフル活用し、自己負担を最小限に抑えて店舗のデジタル化を推進。</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Arrow Button (PC) -->
+              <button onclick="scrollServiceCarousel('carousel-dx', 320)" class="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/95 border border-slate-200 shadow-xl text-brand-darkText hover:text-sky-600 hover:scale-110 transition-all items-center justify-center focus:outline-none">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 4: COST SIMULATOR (シミュレーター修正・完全整合版) ================= -->
+    <div id="page-simulator" class="tab-content">
+      <section class="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        
+        <div class="text-center mb-6 sm:mb-8">
+          <h1 class="text-2xl sm:text-5xl font-black text-brand-darkText mt-1">
+            店舗コスト削減 <span class="text-gradient">シミュレーター</span>
+          </h1>
+          <p class="text-brand-bodyText mt-2 sm:mt-3 max-w-2xl mx-auto text-xs sm:text-base">
+            該当する項目にチェックを入れ、現在のおおよその月額費用を選択してください。<br class="hidden sm:inline">
+            即座に月間・年間の見込削減額を算出します。
+          </p>
+        </div>
+
+        <!-- Preset Bar -->
+        <div class="max-w-4xl mx-auto mb-6 sm:mb-8 p-3 rounded-2xl bg-white border border-slate-200 card-shadow flex flex-wrap items-center justify-center gap-2 text-xs">
+          <span class="font-bold text-slate-500 w-full sm:w-auto text-center sm:text-left mb-1 sm:mb-0 mr-0 sm:mr-2">
+            <i class="fa-solid fa-wand-magic-sparkles text-brand-cyan"></i> ワンタップ診断:
+          </span>
+          <button onclick="applyPreset('popular')" class="px-3 py-1.5 rounded-lg bg-brand-bgLight hover:bg-brand-cyan/10 text-brand-darkText font-bold border border-slate-200 hover:border-brand-cyan transition-all text-[11px] sm:text-xs">固定費人気セット</button>
+          <button onclick="applyPreset('infra')" class="px-3 py-1.5 rounded-lg bg-brand-bgLight hover:bg-brand-cyan/10 text-brand-darkText font-bold border border-slate-200 hover:border-brand-cyan transition-all text-[11px] sm:text-xs">インフラ特化</button>
+          <button onclick="applyPreset('all')" class="px-3.5 py-1.5 rounded-lg bg-brand-cyan/10 hover:bg-brand-cyan/20 text-brand-cyan font-bold border border-brand-cyan/30 transition-all text-[11px] sm:text-xs">全項目選択</button>
+          <button onclick="applyPreset('none')" class="px-3.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium transition-all text-[11px] sm:text-xs">クリア</button>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+          
+          <!-- Left: 11 Reduction Items Form -->
+          <div class="lg:col-span-7 space-y-5 sm:space-y-6">
+            
+            <!-- Category A: インフラ・エネルギー -->
+            <div class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200 border-l-4 border-l-amber-500 card-shadow">
+              <h3 class="text-xs sm:text-sm font-bold text-brand-darkText mb-3 sm:mb-4 flex items-center justify-between">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-bolt text-amber-500"></i> 1. インフラ・光熱費・通信</span>
+                <span class="text-[10px] sm:text-[11px] font-normal text-slate-400">平均削減率: 10〜25%</span>
+              </h3>
+              
+              <div class="space-y-3 sm:space-y-4">
+                <!-- Item 1: 電気・ガス -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-electric" checked class="cost-item-check" data-target="slider-electric" data-rate="0.10">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">電気・ガス料金</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">新電力・新都市ガスへの切替プラン比較</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-electric" min="20000" max="300000" step="5000" value="80000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-electric" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">80,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 2: 水道料金 -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-water" checked class="cost-item-check" data-target="slider-water" data-rate="0.12">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">水道料金（節水装置等）</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">高効率節水バルブ・使用流量の最適化</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-water" min="10000" max="150000" step="5000" value="25000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-water" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">25,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 3: 固定電話＋光回線 -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-internet" checked class="cost-item-check" data-target="slider-internet" data-rate="0.20">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">固定電話＋光回線</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">不要オプション解約・法人卸プラン導入</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-internet" min="5000" max="50000" step="1000" value="12000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-internet" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">12,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 4: 携帯・モバイル回線 (変更) -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-mobile" class="cost-item-check" data-target="slider-mobile" data-rate="0.25">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">携帯・モバイル回線</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">事業主専用特別プランへの切替</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-mobile" min="5000" max="60000" step="2000" value="15000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-mobile" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">15,000円/月</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category B: 決済・設備 -->
+            <div class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200 border-l-4 border-l-brand-cyan card-shadow">
+              <h3 class="text-xs sm:text-sm font-bold text-brand-darkText mb-3 sm:mb-4 flex items-center justify-between">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-credit-card text-brand-cyan"></i> 2. 店舗設備・決済システム</span>
+                <span class="text-[10px] sm:text-[11px] font-normal text-slate-400">平均削減率: 15〜25%</span>
+              </h3>
+              
+              <div class="space-y-3 sm:space-y-4">
+                <!-- Item 5: POSレジ -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-pos" checked class="cost-item-check" data-target="slider-pos" data-rate="0.25">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">POSレジ・オーダー月額料</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">クラウド型POSへの移行・リース適正化</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-pos" min="5000" max="50000" step="1000" value="12000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-pos" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">12,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 6: クレカ決済手数料 -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-card" checked class="cost-item-check" data-target="slider-card" data-rate="0.15">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">クレカ・キャッシュレス決済手数料</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">決済代行手数料率の個別引き下げ交渉</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-card" min="10000" max="200000" step="5000" value="40000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-card" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">40,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 7: 空調設備メンテナンス・リース料 (変更) -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-ac" class="cost-item-check" data-target="slider-ac" data-rate="0.15">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">空調設備メンテナンス・リース料</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">省エネ制御装置・定期清掃プラン見直し</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-ac" min="10000" max="100000" step="5000" value="25000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-ac" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">25,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 8: 厨房設備・リース -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-kitchen" class="cost-item-check" data-target="slider-kitchen" data-rate="0.12">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">厨房設備・機器リース料</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">補助金活用・再契約・中古機器リプレイス</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-kitchen" min="10000" max="150000" step="5000" value="30000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-kitchen" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">30,000円/月</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Category C: Web・採用・マーケ -->
+            <div class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200 border-l-4 border-l-sky-500 card-shadow">
+              <h3 class="text-xs sm:text-sm font-bold text-brand-darkText mb-3 sm:mb-4 flex items-center justify-between">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-bullhorn text-sky-600"></i> 3. Web・SNS・求人採用</span>
+                <span class="text-[10px] sm:text-[11px] font-normal text-slate-400">平均削減率: 20〜35%</span>
+              </h3>
+              
+              <div class="space-y-3 sm:space-y-4">
+                <!-- Item 9: ホームページ制作・管理費 -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-hp" checked class="cost-item-check" data-target="slider-hp" data-rate="0.30">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">ホームページ管理・保守費用</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">高額な管理費契約の解約・自社運用シフト</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-hp" min="5000" max="60000" step="2000" value="15000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-hp" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">15,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 10: SNS・WEB集客運用代行費 (変更) -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-sns" class="cost-item-check" data-target="slider-sns" data-rate="0.25">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">SNS・WEB集客運用代行費</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">成果連動・MEO・自前運用化支援</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-sns" min="20000" max="150000" step="5000" value="40000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-sns" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">40,000円/月</span>
+                  </div>
+                </div>
+
+                <!-- Item 11: 求人料金 -->
+                <div class="p-3 sm:p-3.5 rounded-xl bg-brand-bgLight border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
+                  <div>
+                    <label class="flex items-center gap-2.5 sm:gap-3 cursor-pointer">
+                      <input type="checkbox" id="item-job" checked class="cost-item-check" data-target="slider-job" data-rate="0.25">
+                      <span class="text-xs sm:text-sm font-semibold text-brand-darkText">求人広告費・媒体掲載料</span>
+                    </label>
+                    <div class="text-[10px] sm:text-[11px] text-slate-400 pl-6 sm:pl-7">Indeed無料枠/SNS採用への移行・単価圧縮</div>
+                  </div>
+                  <div class="flex items-center gap-2 sm:gap-3 justify-between sm:justify-end pl-6 sm:pl-0">
+                    <input type="range" id="slider-job" min="20000" max="250000" step="5000" value="60000" class="cost-slider flex-grow sm:flex-grow-0 w-28 sm:w-36">
+                    <span id="val-job" class="text-xs font-bold text-brand-cyan w-20 text-right shrink-0">60,000円/月</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Real-time Calculation Summary & Action Plan -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <div class="bg-white rounded-3xl p-5 sm:p-8 border-2 border-brand-cyan/30 card-shadow space-y-4 sm:space-y-5 sticky top-24 sm:top-28">
+              
+              <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+                <span class="text-xs font-bold text-brand-subText uppercase tracking-wider">試算結果サマリー</span>
+                <span id="selected-count-badge" class="px-2.5 py-0.5 rounded-full bg-brand-cyan/10 text-brand-cyan text-xs font-bold">7項目選択中</span>
+              </div>
+
+              <!-- Annual Savings Display -->
+              <div class="text-center py-1">
+                <div class="text-xs text-brand-subText font-bold mb-1">年間コスト削減見込み額</div>
+                <div class="text-3xl sm:text-5xl font-black text-brand-cyan font-en tracking-tight">
+                  <span id="annual-saving-display">0</span> <span class="text-base sm:text-lg font-sans font-bold text-brand-darkText">円 / 年</span>
+                </div>
+                <div class="text-xs text-brand-bodyText mt-1.5 sm:mt-2 font-medium">
+                  月間削減額：<span id="monthly-saving-display" class="font-bold text-brand-darkText font-en text-sm">0</span> 円/月
+                </div>
+              </div>
+
+              <!-- Breakdown Bar Chart -->
+              <div class="space-y-2 text-xs font-medium">
+                <div class="flex justify-between text-brand-subText">
+                  <span>インフラ・光熱費</span>
+                  <span id="cat-infra-val" class="font-en text-brand-darkText font-bold">0円</span>
+                </div>
+                <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div id="bar-infra" class="h-full bg-amber-500 transition-all duration-300" style="width: 30%"></div>
+                </div>
+
+                <div class="flex justify-between text-brand-subText pt-1">
+                  <span>店舗設備・決済手数料</span>
+                  <span id="cat-equip-val" class="font-en text-brand-darkText font-bold">0円</span>
+                </div>
+                <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div id="bar-equip" class="h-full bg-brand-cyan transition-all duration-300" style="width: 40%"></div>
+                </div>
+
+                <div class="flex justify-between text-brand-subText pt-1">
+                  <span>Web・採用・集客</span>
+                  <span id="cat-web-val" class="font-en text-brand-darkText font-bold">0円</span>
+                </div>
+                <div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div id="bar-web" class="h-full bg-sky-500 transition-all duration-300" style="width: 30%"></div>
+                </div>
+              </div>
+
+              <!-- Basis & Disclaimer Note -->
+              <div class="p-3 rounded-xl bg-slate-50 text-[10px] text-slate-500 leading-relaxed border border-slate-200">
+                <strong class="text-slate-700">【試算根拠と注意事項】</strong><br>
+                ※本試算結果は、過去の削減支援実績および提携プランの平均削減率（10〜30%）に基づき算出した概算値です。実際の削減額は現在の契約内容や使用状況により変動します。
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="space-y-2.5 sm:space-y-3 pt-1">
+                <button id="gemini-deep-report-btn" class="w-full py-3 rounded-xl bg-brand-bgLight border border-brand-cyan/40 text-brand-darkText font-bold text-xs sm:text-sm hover:bg-brand-cyan hover:text-white transition-all flex items-center justify-center gap-2 shadow-sm">
+                  <i class="fa-solid fa-sparkles text-brand-cyan"></i>
+                  <span>AIで具体的削減プランを生成</span>
+                </button>
+
+                <button id="transfer-to-contact-btn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-brand-orange text-white font-extrabold text-sm shadow-lg shadow-orange-500/25 hover:from-amber-600 hover:to-brand-orangeHover hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>この試算内容で無料相談する</span>
+                </button>
+              </div>
+
+              <!-- AI Output Box inside sidebar -->
+              <div id="ai-deep-result-box" class="hidden p-4 rounded-xl bg-brand-bgLight border border-brand-cyan/30 space-y-3 text-xs leading-relaxed max-h-64 overflow-y-auto custom-scrollbar">
+                <div class="flex items-center justify-between text-brand-cyan font-bold">
+                  <span><i class="fa-solid fa-robot"></i> 削減アドバイスレポート</span>
+                  <button id="close-ai-box-btn" class="text-slate-400 hover:text-brand-darkText"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div id="ai-deep-content" class="text-brand-bodyText space-y-2"></div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+    </div>
+
+    <!-- ================= PAGE 5: COMPANY (会社概要) ================= -->
+    <div id="page-company" class="tab-content">
+      <section class="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-10 sm:mb-16">
+          <span class="text-brand-cyan font-en font-bold tracking-widest text-xs uppercase">Company Profile</span>
+          <h1 class="text-2xl sm:text-5xl font-black text-brand-darkText mt-2">会社概要</h1>
+        </div>
+
+        <div class="bg-white rounded-3xl overflow-hidden card-shadow border border-slate-200">
+          <dl class="divide-y divide-slate-100 text-xs sm:text-base">
+            <div class="px-5 py-4 sm:px-6 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 bg-brand-bgLight/50">
+              <dt class="font-bold text-brand-darkText">会社名</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 text-brand-darkText font-semibold">Equivalent Exchange 合同会社</dd>
+            </div>
+            <div class="px-5 py-4 sm:px-6 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
+              <dt class="font-bold text-brand-darkText">事業内容</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 text-brand-bodyText space-y-1">
+                <p>・店舗向けコスト削減・資金調達支援事業（光熱費・通信・決済手数料・空調・設備リース）</p>
+                <p>・店舗集客および採用最適化支援事業（MEO・HP制作・デリバリー新規導入・求人最適化）</p>
+                <p>・店舗オペレーション改善・DXツール導入支援事業（クラウドPOS・予約シフト自動化）</p>
+              </dd>
+            </div>
+            <div class="px-5 py-4 sm:px-6 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 bg-brand-bgLight/50">
+              <dt class="font-bold text-brand-darkText">代表者</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 text-brand-darkText">［代表者氏名］</dd>
+            </div>
+            <div class="px-5 py-4 sm:px-6 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4">
+              <dt class="font-bold text-brand-darkText">所在地</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 text-brand-bodyText">［所在地］</dd>
+            </div>
+            <div class="px-5 py-4 sm:px-6 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 bg-brand-bgLight/50">
+              <dt class="font-bold text-brand-darkText">お問い合わせ</dt>
+              <dd class="mt-1 sm:mt-0 sm:col-span-2 text-brand-bodyText">Webサイト内のお問い合わせフォームまたは公式LINEよりご連絡ください。</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </div>
+
+    <!-- ================= PAGE 6: CONTACT (お問い合わせ) ================= -->
+    <div id="page-contact" class="tab-content">
+      <section class="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+        <div class="text-center mb-8 sm:mb-12">
+          <span class="text-brand-orange font-en font-bold tracking-widest text-xs uppercase">Contact Us</span>
+          <h1 class="text-2xl sm:text-5xl font-black text-brand-darkText mt-2">無料相談・お問い合わせ</h1>
+          <p class="text-brand-bodyText mt-3 sm:mt-4 text-xs sm:text-base leading-relaxed">
+            コスト削減、集客、採用、DXなど、店舗のお悩みをお気軽にご相談ください。<br class="hidden sm:inline">
+            押し売りや強引な営業は一切行いません。
+          </p>
+        </div>
+
+        <!-- LINE Quick Consultation Banner -->
+        <div class="mb-6 sm:mb-8 p-4 sm:p-6 rounded-3xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white card-shadow flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex items-center gap-3.5 sm:gap-4 text-center sm:text-left">
+            <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-white text-emerald-500 flex items-center justify-center text-xl sm:text-2xl shrink-0 shadow-md">
+              <i class="fa-brands fa-line"></i>
+            </div>
+            <div>
+              <div class="text-[11px] sm:text-xs font-bold text-emerald-100">フォーム入力がご面倒なオーナー様へ</div>
+              <h3 class="text-sm sm:text-lg font-black leading-tight mt-0.5">LINEで検針票の写真を送るだけ診断</h3>
+            </div>
+          </div>
+          <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto text-center justify-center whitespace-nowrap px-6 py-2.5 sm:py-3 rounded-full bg-white text-emerald-700 font-extrabold text-xs sm:text-sm hover:bg-emerald-50 shadow-md hover:scale-105 transition-all flex items-center gap-2">
+            <i class="fa-brands fa-line text-base sm:text-lg"></i>
+            <span>LINEでかんたん相談</span>
+          </a>
+        </div>
+
+        <form id="main-contact-form" class="bg-white rounded-3xl p-5 sm:p-10 space-y-5 sm:space-y-6 card-shadow border border-slate-200">
+          <div>
+            <label class="block text-xs sm:text-sm font-bold text-brand-darkText mb-1.5 sm:mb-2">貴社名 / 店舗名 <span class="text-rose-500">*</span></label>
+            <input type="text" id="contact-company" required placeholder="例：カフェ エクスチェンジ" class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-brand-bgLight border border-slate-200 text-brand-darkText placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:bg-white transition-all text-xs sm:text-sm">
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div>
+              <label class="block text-xs sm:text-sm font-bold text-brand-darkText mb-1.5 sm:mb-2">ご担当者名 <span class="text-rose-500">*</span></label>
+              <input type="text" id="contact-name" required placeholder="例：山田 太郎" class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-brand-bgLight border border-slate-200 text-brand-darkText placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:bg-white transition-all text-xs sm:text-sm">
+            </div>
+            <div>
+              <label class="block text-xs sm:text-sm font-bold text-brand-darkText mb-1.5 sm:mb-2">お電話番号 <span class="text-rose-500">*</span></label>
+              <input type="tel" id="contact-phone" required placeholder="例：090-1234-5678" class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-brand-bgLight border border-slate-200 text-brand-darkText placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:bg-white transition-all text-xs sm:text-sm">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs sm:text-sm font-bold text-brand-darkText mb-1.5 sm:mb-2">メールアドレス <span class="text-rose-500">*</span></label>
+            <input type="email" id="contact-email" required placeholder="例：info@example.com" class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-brand-bgLight border border-slate-200 text-brand-darkText placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:bg-white transition-all text-xs sm:text-sm">
+          </div>
+
+          <div>
+            <label class="block text-xs sm:text-sm font-bold text-brand-darkText mb-1.5 sm:mb-2">ご興味のある分野（複数選択可）</label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
+              <label class="flex items-center gap-2 text-xs sm:text-sm text-brand-darkText p-2.5 sm:p-3 rounded-xl bg-brand-bgLight border border-slate-200 cursor-pointer hover:border-brand-orange">
+                <input type="checkbox" id="form-check-cost" checked class="accent-orange"> <span>コスト削減（11項目）</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs sm:text-sm text-brand-darkText p-2.5 sm:p-3 rounded-xl bg-brand-bgLight border border-slate-200 cursor-pointer hover:border-brand-orange">
+                <input type="checkbox" id="form-check-growth" class="accent-orange"> <span>集客・採用・デリバリー</span>
+              </label>
+              <label class="flex items-center gap-2 text-xs sm:text-sm text-brand-darkText p-2.5 sm:p-3 rounded-xl bg-brand-bgLight border border-slate-200 cursor-pointer hover:border-brand-orange">
+                <input type="checkbox" id="form-check-dx" class="accent-orange"> <span>店舗DX・業務効率化</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 写真添付エリア -->
+          <div>
+            <label class="block text-xs sm:text-sm font-bold text-brand-darkText mb-1.5 flex items-center justify-between">
+              <span>検針票・明細書の写真添付（任意）</span>
+              <span class="text-[10px] sm:text-[11px] text-brand-cyan font-bold">スマホ撮影OK</span>
+            </label>
+            <div class="border-2 border-dashed border-slate-300 rounded-2xl p-4 sm:p-5 text-center bg-slate-50/70 hover:bg-slate-50 transition-colors cursor-pointer relative" onclick="document.getElementById('file-upload-input').click()">
+              <input type="file" id="file-upload-input" accept="image/*,.pdf" multiple class="hidden" onchange="handleFileSelect(event)">
+              <div class="space-y-1 text-slate-500">
+                <i class="fa-solid fa-cloud-arrow-up text-xl sm:text-2xl text-brand-cyan"></i>
+                <div class="text-xs font-bold text-slate-700">タップして写真・ファイルを選択</div>
+                <div class="text-[10px] text-slate-400">電気・ガス検針票、通信・決済明細等（PNG, JPG, PDF）</div>
+              </div>
+              <div id="file-preview-list" class="mt-2.5 flex flex-wrap gap-1.5 justify-center"></div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs sm:text-sm font-bold text-brand-darkText mb-1.5 sm:mb-2">ご相談内容・シミュレーション引き継ぎ情報</label>
+            <textarea id="contact-detail" rows="4" placeholder="現状のお悩みや削減シミュレーションの結果がここに自動反映されます。" class="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 rounded-xl bg-brand-bgLight border border-slate-200 text-brand-darkText placeholder-slate-400 focus:outline-none focus:border-brand-orange focus:bg-white transition-all text-xs sm:text-sm"></textarea>
+          </div>
+
+          <!-- Privacy Agreement Checkbox -->
+          <div class="p-3.5 sm:p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <label class="flex items-start gap-2.5 sm:gap-3 cursor-pointer">
+              <input type="checkbox" id="privacy-agree" required class="accent-orange mt-0.5">
+              <span class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                当社の <a href="javascript:void(0)" onclick="openPrivacyModal()" class="text-brand-cyan font-bold underline hover:text-brand-blue">プライバシーポリシー（個人情報保護方針）</a> を確認し、同意の上で送信します。<span class="text-rose-500">*</span>
+              </span>
+            </label>
+          </div>
+
+          <!-- Highlighted Orange Submit Button -->
+          <button type="submit" class="w-full py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-amber-500 to-brand-orange text-white font-black text-sm sm:text-lg shadow-xl shadow-orange-500/30 hover:from-amber-600 hover:to-brand-orangeHover hover:scale-[1.01] transition-all">
+            送信する（無料診断・ご相談）
+          </button>
+        </form>
+
+        <div id="contact-success-msg" class="hidden mt-6 p-6 rounded-2xl bg-white border border-brand-orange card-shadow text-center">
+          <i class="fa-solid fa-circle-check text-brand-orange text-3xl sm:text-4xl mb-3"></i>
+          <h4 class="font-bold text-base sm:text-lg text-brand-darkText">お問い合わせを受け付けました</h4>
+          <p class="text-xs sm:text-sm text-brand-bodyText mt-1">内容を確認の上、担当者より1営業日以内にご連絡差し上げます。</p>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- STICKY FLOATING CTA BAR (Scroll Triggered) -->
+  <div id="floating-cta" class="fixed bottom-4 sm:bottom-5 right-4 sm:right-5 z-40 transition-all duration-500 opacity-0 pointer-events-none translate-y-6">
+    <button onclick="switchPage('simulator')" class="px-4 sm:px-5 py-3 sm:py-3.5 rounded-full bg-gradient-to-r from-amber-500 to-brand-orange text-white font-extrabold text-xs sm:text-sm shadow-2xl shadow-orange-500/40 hover:scale-105 hover:from-amber-600 hover:to-brand-orangeHover transition-all flex items-center gap-1.5 sm:gap-2 border border-white/40">
+      <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+      <i class="fa-solid fa-calculator text-xs sm:text-sm"></i>
+      <span>1分でコスト削減額を試算</span>
+    </button>
+  </div>
+
+  <!-- PRIVACY POLICY MODAL -->
+  <div id="privacy-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden">
+      <div class="p-4 sm:p-6 border-b border-slate-100 flex items-center justify-between">
+        <h3 class="text-base sm:text-lg font-bold text-brand-darkText">プライバシーポリシー（個人情報保護方針）</h3>
+        <button onclick="closePrivacyModal()" class="text-slate-400 hover:text-brand-darkText text-lg sm:text-xl p-2"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed custom-scrollbar">
+        <p>Equivalent Exchange 合同会社（以下「当社」）は、当社の提供するサービスにおいて、お客様の個人情報の重要性を認識し、個人情報保護に関する法律を遵守するとともに、以下のプライバシーポリシーに従って適切な取り扱い及び保護に努めます。</p>
+        
+        <h4 class="font-bold text-brand-darkText text-xs sm:text-sm">1. 個人情報の取得</h4>
+        <p>当社は、適法かつ公正な手段によって個人情報を取得します。お問い合わせやシミュレーションのご利用時にお名前、電話番号、メールアドレス、店舗情報、添付された明細情報等を取得する場合があります。</p>
+
+        <h4 class="font-bold text-brand-darkText text-xs sm:text-sm">2. 利用目的</h4>
+        <p>取得した個人情報は、以下の目的のために利用いたします。<br>
+        ・店舗コスト削減、集客、採用、DX等の提案およびサービス提供のため<br>
+        ・お問い合わせに対する回答および連絡のため<br>
+        ・サービス品質の向上および統計データの作成のため</p>
+
+        <h4 class="font-bold text-brand-darkText text-xs sm:text-sm">3. 第三者への開示・提供</h4>
+        <p>当社は、法令に基づく場合を除き、ご本人の同意を得ることなく個人情報を第三者に開示・提供いたしません。</p>
+
+        <h4 class="font-bold text-brand-darkText text-xs sm:text-sm">4. 安全管理措置</h4>
+        <p>当社は、個人情報の漏えい、滅失またはき損の防止その他の個人情報の安全管理のために必要かつ適切な措置を講じます。</p>
+      </div>
+      <div class="p-3.5 sm:p-4 border-t border-slate-100 bg-slate-50 text-right">
+        <button onclick="closePrivacyModal()" class="px-5 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-brand-cyan text-white font-bold text-xs hover:bg-brand-blue transition-all">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="py-10 sm:py-12 bg-white border-t border-slate-200 text-xs text-brand-subText relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      
+      <!-- Footer Logo Container -->
+      <div class="flex items-center gap-3">
+        <img src="logo.png" alt="Equivalent Exchange" class="h-8 sm:h-9 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('footer-fallback-text').style.display='flex';">
+        <div id="footer-fallback-text" class="hidden items-center gap-2">
+          <span class="font-en text-sm font-bold text-brand-darkText">Equivalent Exchange</span>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-medium text-brand-bodyText text-[11px] sm:text-xs">
+        <button onclick="switchPage('home')" class="hover:text-brand-cyan transition-colors">トップ</button>
+        <button onclick="switchPage('about')" class="hover:text-brand-cyan transition-colors">私たちが考える「等価交換」</button>
+        <button onclick="switchPage('service')" class="hover:text-brand-cyan transition-colors">事業内容</button>
+        <button onclick="switchPage('simulator')" class="hover:text-brand-cyan transition-colors">コスト削減シミュレーター</button>
+        <button onclick="switchPage('company')" class="hover:text-brand-cyan transition-colors">会社概要</button>
+        <button onclick="switchPage('contact')" class="hover:text-brand-orange transition-colors">お問い合わせ</button>
+        <button onclick="openPrivacyModal()" class="hover:text-brand-cyan text-slate-400 transition-colors">プライバシーポリシー</button>
+      </div>
+
+      <p class="text-[10px] sm:text-xs">&copy; Equivalent Exchange. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT: LOGO-COLOR RING CANVAS ANIMATION, SCROLL CONTROLS, ROUTING, FILE UPLOAD, SIMULATOR & AI API -->
+  <script>
+    /* -------------------------------------------------------------
+       1. GLOBAL STATE & SCROLL-TRIGGERED FLOATING BUTTON CONTROL
+       ------------------------------------------------------------- */
+    let currentPage = 'home';
+
+    function updateFloatingCtaVisibility() {
+      const floatBtn = document.getElementById('floating-cta');
+      if (!floatBtn) return;
+
+      if (currentPage === 'simulator' || currentPage === 'contact') {
+        floatBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-6');
+        floatBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        return;
+      }
+
+      if (currentPage === 'home') {
+        const anchor = document.getElementById('about-card-anchor');
+        const scrollThreshold = anchor ? (anchor.getBoundingClientRect().top + window.scrollY - 100) : 550;
+
+        if (window.scrollY > scrollThreshold) {
+          floatBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-6');
+          floatBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        } else {
+          floatBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-6');
+          floatBtn.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+        }
+      } else {
+        floatBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-6');
+        floatBtn.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      }
+    }
+
+    window.addEventListener('scroll', updateFloatingCtaVisibility, { passive: true });
+
+    /* -------------------------------------------------------------
+       2. MULTI-PAGE VIEW ROUTING (PC & Mobile Navigation Synced)
+       ------------------------------------------------------------- */
+    function switchPage(pageId) {
+      currentPage = pageId;
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      const targetPage = document.getElementById(`page-${pageId}`);
+      if (targetPage) {
+        targetPage.classList.add('active');
+      }
+
+      // Sync PC Desktop Nav
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.dataset.target === pageId) {
+          link.classList.add('text-brand-cyan', 'border-b-2', 'border-brand-cyan');
+          link.classList.remove('text-brand-bodyText');
+        } else {
+          link.classList.remove('text-brand-cyan', 'border-b-2', 'border-brand-cyan');
+          link.classList.add('text-brand-bodyText');
+        }
+      });
+
+      // Sync Mobile Drawer Nav
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        if (link.dataset.target === pageId) {
+          link.classList.add('text-brand-cyan', 'bg-brand-cyan/10', 'font-semibold');
+          link.classList.remove('text-brand-bodyText', 'font-medium');
+        } else {
+          link.classList.remove('text-brand-cyan', 'bg-brand-cyan/10', 'font-semibold');
+          link.classList.add('text-brand-bodyText', 'font-medium');
+        }
+      });
+
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      if (mobileDrawer) mobileDrawer.classList.add('hidden');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(updateFloatingCtaVisibility, 100);
+    }
+    window.switchPage = switchPage;
+
+    const mobileBtn = document.getElementById('mobile-toggle-btn');
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        document.getElementById('mobile-drawer').classList.toggle('hidden');
+      });
+    }
+
+    /* -------------------------------------------------------------
+       3. SERVICE SECTION CAROUSEL SCROLLER (PC Side-Arrows)
+       ------------------------------------------------------------- */
+    function scrollServiceCarousel(carouselId, distance) {
+      const el = document.getElementById(carouselId);
+      if (el) {
+        el.scrollBy({ left: distance, behavior: 'smooth' });
+      }
+    }
+    window.scrollServiceCarousel = scrollServiceCarousel;
+
+    /* -------------------------------------------------------------
+       4. PRIVACY POLICY MODAL CONTROLS
+       ------------------------------------------------------------- */
+    function openPrivacyModal() {
+      document.getElementById('privacy-modal').classList.remove('hidden');
+    }
+    function closePrivacyModal() {
+      document.getElementById('privacy-modal').classList.add('hidden');
+    }
+    window.openPrivacyModal = openPrivacyModal;
+    window.closePrivacyModal = closePrivacyModal;
+
+    /* -------------------------------------------------------------
+       5. FILE UPLOAD PREVIEW HANDLER
+       ------------------------------------------------------------- */
+    function handleFileSelect(event) {
+      const files = event.target.files;
+      const previewList = document.getElementById('file-preview-list');
+      previewList.innerHTML = '';
+
+      Array.from(files).forEach(file => {
+        const badge = document.createElement('div');
+        badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-cyan/10 text-brand-cyan text-[10px] sm:text-[11px] font-bold border border-brand-cyan/30';
+        badge.innerHTML = `<i class="fa-solid fa-file-image"></i> <span>${file.name}</span>`;
+        previewList.appendChild(badge);
+      });
+    }
+    window.handleFileSelect = handleFileSelect;
+
+    /* -------------------------------------------------------------
+       6. GLOBAL AMBIENT LOGO-COLORED RINGS & ORB CANVAS ANIMATION
+       ------------------------------------------------------------- */
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    let width = window.innerWidth || 1200;
+    let height = window.innerHeight || 800;
+    let mouseX = 0, mouseY = 0, targetMouseX = 0, targetMouseY = 0;
+    let time = 0;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    window.addEventListener('mousemove', (e) => {
+      targetMouseX = (e.clientX - width / 2) * 0.03;
+      targetMouseY = (e.clientY - height / 2) * 0.03;
+    });
+
+    function drawOrganicLogoRing(cx, cy, radius, speed, layers = 4, alphaMultiplier = 1) {
+      for (let i = 0; i < layers; i++) {
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(time * speed * (i % 2 === 0 ? 1 : -0.85) + i * 0.8);
+
+        ctx.beginPath();
+        const r = radius * (1 - i * 0.08);
+        const points = 6;
+        for (let p = 0; p <= points; p++) {
+          const angle = (p / points) * Math.PI * 2;
+          const wobble = Math.sin(angle * 3 + time * 1.5 + i) * 12;
+          const px = Math.cos(angle) * (r + wobble);
+          const py = Math.sin(angle) * (r + wobble);
+          if (p === 0) ctx.moveTo(px, py);
+          else ctx.lineTo(px, py);
+        }
+        ctx.closePath();
+
+        const alpha = Math.max(0.04, (0.16 - i * 0.03) * alphaMultiplier);
+        const colors = [
+          `rgba(0, 210, 255, ${alpha * 1.1})`,
+          `rgba(0, 168, 204, ${alpha})`,
+          `rgba(8, 99, 197, ${alpha * 0.9})`,
+          `rgba(5, 42, 110, ${alpha * 0.7})`
+        ];
+        ctx.strokeStyle = colors[i % colors.length];
+        ctx.lineWidth = Math.max(1, 2.4 - i * 0.35);
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
+    function drawAmbientCanvas() {
+      ctx.clearRect(0, 0, width, height);
+
+      mouseX += (targetMouseX - mouseX) * 0.05;
+      mouseY += (targetMouseY - mouseY) * 0.05;
+
+      time += 0.014;
+
+      const ring1X = width * 0.82 + mouseX * 0.8;
+      const ring1Y = height * 0.28 + mouseY * 0.8;
+      drawOrganicLogoRing(ring1X, ring1Y, Math.min(width * 0.22, 180), 0.45, 4, 1);
+
+      const ring2X = width * 0.14 - mouseX * 0.6;
+      const ring2Y = height * 0.76 - mouseY * 0.6;
+      drawOrganicLogoRing(ring2X, ring2Y, Math.min(width * 0.16, 120), -0.35, 3, 0.85);
+
+      if (currentPage !== 'home') {
+        const midX = width * 0.5 + mouseX * 0.4;
+        const midY = height * 0.48 + mouseY * 0.4;
+        drawOrganicLogoRing(midX, midY, Math.min(width * 0.28, 220), 0.25, 3, 0.45);
+      }
+
+      for (let i = 0; i < 7; i++) {
+        const ox = (ring1X + Math.cos(time * 0.75 + i * 0.95) * (130 + i * 18));
+        const oy = (ring1Y + Math.sin(time * 0.75 + i * 0.95) * (130 + i * 18));
+        if (Number.isFinite(ox) && Number.isFinite(oy)) {
+          ctx.beginPath();
+          ctx.fillStyle = i % 2 === 0 ? 'rgba(0, 210, 255, 0.35)' : 'rgba(8, 99, 197, 0.28)';
+          ctx.arc(ox, oy, 2.5 + (i % 3), 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+
+      requestAnimationFrame(drawAmbientCanvas);
+    }
+    drawAmbientCanvas();
+
+    /* -------------------------------------------------------------
+       7. METRICS COUNT-UP ANIMATION
+       ------------------------------------------------------------- */
+    function initCounters() {
+      const counters = document.querySelectorAll('.counter');
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        let current = 0;
+        const increment = target / 35;
+        
+        const update = () => {
+          current += increment;
+          if (current < target) {
+            counter.textContent = Math.ceil(current);
+            requestAnimationFrame(update);
+          } else {
+            counter.textContent = target;
+          }
+        };
+        update();
+      });
+    }
+    window.addEventListener('DOMContentLoaded', initCounters);
+
+    /* -------------------------------------------------------------
+       8. 11-ITEM COST REDUCTION SIMULATOR ENGINE (最新項目完全整合)
+       ------------------------------------------------------------- */
+    const items = [
+      { id: 'electric', slider: 'slider-electric', val: 'val-electric', check: 'item-electric', rate: 0.10, name: '電気・ガス料金', cat: 'infra' },
+      { id: 'water', slider: 'slider-water', val: 'val-water', check: 'item-water', rate: 0.12, name: '水道料金', cat: 'infra' },
+      { id: 'internet', slider: 'slider-internet', val: 'val-internet', check: 'item-internet', rate: 0.20, name: '固定電話＋光回線', cat: 'infra' },
+      { id: 'mobile', slider: 'slider-mobile', val: 'val-mobile', check: 'item-mobile', rate: 0.25, name: '携帯・モバイル回線', cat: 'infra' },
+      { id: 'pos', slider: 'slider-pos', val: 'val-pos', check: 'item-pos', rate: 0.25, name: 'POSレジ・オーダー月額料', cat: 'equip' },
+      { id: 'card', slider: 'slider-card', val: 'val-card', check: 'item-card', rate: 0.15, name: '決済代行手数料', cat: 'equip' },
+      { id: 'ac', slider: 'slider-ac', val: 'val-ac', check: 'item-ac', rate: 0.15, name: '空調設備メンテナンス・リース料', cat: 'equip' },
+      { id: 'kitchen', slider: 'slider-kitchen', val: 'val-kitchen', check: 'item-kitchen', rate: 0.12, name: '厨房設備・機器リース料', cat: 'equip' },
+      { id: 'hp', slider: 'slider-hp', val: 'val-hp', check: 'item-hp', rate: 0.30, name: 'ホームページ管理・保守費用', cat: 'web' },
+      { id: 'sns', slider: 'slider-sns', val: 'val-sns', check: 'item-sns', rate: 0.25, name: 'SNS・WEB集客運用代行費', cat: 'web' },
+      { id: 'job', slider: 'slider-job', val: 'val-job', check: 'item-job', rate: 0.25, name: '求人広告費・媒体掲載料', cat: 'web' }
+    ];
+
+    function updateSliderTrackFill(sliderEl) {
+      const min = parseFloat(sliderEl.min) || 0;
+      const max = parseFloat(sliderEl.max) || 100;
+      const val = parseFloat(sliderEl.value) || 0;
+      const percent = ((val - min) / (max - min)) * 100;
+      
+      sliderEl.style.background = `linear-gradient(to right, #00D2FF 0%, #00A8CC ${percent}%, #FFFFFF ${percent}%, #FFFFFF 100%)`;
+    }
+
+    function calculateTotalSavings() {
+      let totalMonthlySaving = 0;
+      let totalMonthlyCost = 0;
+      let activeCount = 0;
+
+      let infraSave = 0;
+      let equipSave = 0;
+      let webSave = 0;
+
+      items.forEach(item => {
+        const sliderEl = document.getElementById(item.slider);
+        const valEl = document.getElementById(item.val);
+        const checkEl = document.getElementById(item.check);
+
+        const currentVal = parseInt(sliderEl.value, 10);
+        valEl.textContent = `${currentVal.toLocaleString()}円/月`;
+
+        updateSliderTrackFill(sliderEl);
+
+        if (checkEl.checked) {
+          activeCount++;
+          const saving = Math.round(currentVal * item.rate);
+          totalMonthlySaving += saving;
+          totalMonthlyCost += currentVal;
+
+          if (item.cat === 'infra') infraSave += saving;
+          if (item.cat === 'equip') equipSave += saving;
+          if (item.cat === 'web') webSave += saving;
+        }
+      });
+
+      const totalAnnualSaving = totalMonthlySaving * 12;
+
+      document.getElementById('annual-saving-display').textContent = totalAnnualSaving.toLocaleString();
+      document.getElementById('monthly-saving-display').textContent = totalMonthlySaving.toLocaleString();
+      document.getElementById('selected-count-badge').textContent = `${activeCount}項目選択中`;
+
+      document.getElementById('cat-infra-val').textContent = `約${(infraSave * 12).toLocaleString()}円/年`;
+      document.getElementById('cat-equip-val').textContent = `約${(equipSave * 12).toLocaleString()}円/年`;
+      document.getElementById('cat-web-val').textContent = `約${(webSave * 12).toLocaleString()}円/年`;
+
+      const safeTotal = totalMonthlySaving || 1;
+      document.getElementById('bar-infra').style.width = `${(infraSave / safeTotal) * 100}%`;
+      document.getElementById('bar-equip').style.width = `${(equipSave / safeTotal) * 100}%`;
+      document.getElementById('bar-web').style.width = `${(webSave / safeTotal) * 100}%`;
+    }
+
+    function applyPreset(type) {
+      items.forEach(item => {
+        const chk = document.getElementById(item.check);
+        if (type === 'all') chk.checked = true;
+        else if (type === 'none') chk.checked = false;
+        else if (type === 'popular') {
+          chk.checked = ['electric', 'internet', 'pos', 'card'].includes(item.id);
+        } else if (type === 'infra') {
+          chk.checked = item.cat === 'infra';
+        }
+      });
+      calculateTotalSavings();
+    }
+    window.applyPreset = applyPreset;
+
+    items.forEach(item => {
+      const sliderEl = document.getElementById(item.slider);
+      sliderEl.addEventListener('input', calculateTotalSavings);
+      sliderEl.addEventListener('change', calculateTotalSavings);
+      document.getElementById(item.check).addEventListener('change', calculateTotalSavings);
+      updateSliderTrackFill(sliderEl);
+    });
+
+    calculateTotalSavings();
+
+    /* -------------------------------------------------------------
+       9. PRE-FILL CONTACT FORM FROM SIMULATION
+       ------------------------------------------------------------- */
+    document.getElementById('transfer-to-contact-btn').addEventListener('click', () => {
+      const activeItems = items.filter(i => document.getElementById(i.check).checked);
+      const annualSaving = document.getElementById('annual-saving-display').textContent;
+      const monthlySaving = document.getElementById('monthly-saving-display').textContent;
+
+      let summaryText = `【コスト削減シミュレーション試算結果】\n`;
+      summaryText += `・年間見込み削減額: 約 ${annualSaving} 円\n`;
+      summaryText += `・月間見込み削減額: 約 ${monthlySaving} 円\n\n`;
+      summaryText += `【対象選択項目】\n`;
+      activeItems.forEach(i => {
+        const cost = parseInt(document.getElementById(i.slider).value, 10).toLocaleString();
+        summaryText += `・${i.name}: 月額約 ${cost} 円 (推定削減率 ${Math.round(i.rate * 100)}%)\n`;
+      });
+      summaryText += `\n上記項目の具体的な見直し手続きおよび見積もり相談を希望します。`;
+
+      document.getElementById('contact-detail').value = summaryText;
+      document.getElementById('form-check-cost').checked = true;
+
+      switchPage('contact');
+    });
+
+    /* -------------------------------------------------------------
+       10. AI API INTEGRATION
+       ------------------------------------------------------------- */
+    const apiKey = "";
+
+    async function fetchWithRetry(url, options, maxRetries = 5) {
+      const delays = [1000, 2000, 4000, 8000, 16000];
+      for (let i = 0; i < maxRetries; i++) {
+        try {
+          const res = await fetch(url, options);
+          if (res.ok) return await res.json();
+        } catch (e) {}
+        await new Promise(r => setTimeout(r, delays[i]));
+      }
+      throw new Error("API call failed after retries.");
+    }
+
+    document.getElementById('gemini-deep-report-btn').addEventListener('click', async () => {
+      const btn = document.getElementById('gemini-deep-report-btn');
+      const box = document.getElementById('ai-deep-result-box');
+      const content = document.getElementById('ai-deep-content');
+
+      const activeItems = items.filter(i => document.getElementById(i.check).checked);
+      if (activeItems.length === 0) {
+        box.classList.remove('hidden');
+        content.innerHTML = `<p class="text-amber-600 font-bold">最低1つ以上の項目にチェックを入れてください。</p>`;
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin text-brand-cyan"></i> <span>AI分析中...</span>`;
+      box.classList.remove('hidden');
+      content.innerHTML = `<p class="text-brand-subText animate-pulse">選択された${activeItems.length}項目の削減ポイントと即効アドバイスを抽出中...</p>`;
+
+      const itemListStr = activeItems.map(i => {
+        const cost = document.getElementById(i.slider).value;
+        return `${i.name} (月額: ${cost}円)`;
+      }).join(', ');
+
+      const prompt = `あなたは店舗向けコスト削減の専門コンサルタントです。
+店舗オーナーが選択した以下の固定費項目について、具体的かつ即効性のある削減手順と着眼点を、簡潔な3つのアドバイス（各1〜2行）として日本語で提示してください。
+
+対象項目: ${itemListStr}
+年間の見込削減額: 約${document.getElementById('annual-saving-display').textContent}円`;
+
+      const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+      try {
+        const data = await fetchWithRetry(apiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+
+        const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+        if (text) {
+          content.innerHTML = `<div class="space-y-2 text-brand-darkText">${text.replace(/\n/g, '<br>')}</div>`;
+        } else {
+          throw new Error("No text response");
+        }
+      } catch (err) {
+        content.innerHTML = `
+          <div class="space-y-1.5 text-brand-darkText">
+            <p><strong>1. インフラ・決済：</strong>契約プランの切り替えと相見積もりにより、業務環境を変えずに月次15〜25%の即時削減が可能です。</p>
+            <p><strong>2. Web・求人・集客：</strong>高額な月額固定契約から自前運用や成果連動へシフトすることで、費用対効果が劇的に改善します。</p>
+            <p><strong>3. アクション：</strong>専任担当者にご相談いただければ、明細確認から契約代行までワンストップでサポートいたします。</p>
+          </div>
+        `;
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fa-solid fa-sparkles text-brand-cyan"></i> <span>AIで具体的削減プランを生成</span>`;
+      }
+    });
+
+    document.getElementById('close-ai-box-btn').addEventListener('click', () => {
+      document.getElementById('ai-deep-result-box').classList.add('hidden');
+    });
+
+    /* Contact Form Submit Handling */
+    document.getElementById('main-contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('main-contact-form').classList.add('hidden');
+      document.getElementById('contact-success-msg').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
